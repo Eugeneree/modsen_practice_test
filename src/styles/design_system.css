@@ -157,6 +157,9 @@ body {
     gap: 15px;
     font-family: var(--font-w-sans);
     font-size: var(--h5);
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 [class^="navbar__menu--"] {
@@ -173,6 +176,11 @@ body {
     font-size: var(--h2);
     color: var(--color-white-100);
 }
+
+.navbar__checkbox {
+    display: none;
+}
+
 
 /**
 * ! style rules for common classes
@@ -229,6 +237,7 @@ body {
     font-family: var(--font-w-sans);
     font-size: var(--sub);
 }
+
 /*
 * media queary breakpoint for pc screen
 */
@@ -254,7 +263,7 @@ body {
 }
 
 /*
-* media queary breakpoint for tablet screen
+* media query breakpoint for tablet screen
 */
 
 @media (max-width: 768px) {
@@ -268,8 +277,7 @@ body {
 
     /* remove navbar links and push them into hamburger menu if screen-width smaller then 768px*/
     .navbar__menu {
-        /* display: none; */
-        z-index: 1;
+        z-index: 0;
         position: absolute;
         top: 10vh;
         background-color: var(--color-green-100);
@@ -277,7 +285,7 @@ body {
         left: 0;
         right: 0;
         height: 100vh;
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -292,14 +300,22 @@ body {
         display: block;
     }
 
-    .hide {
+    .navbar__menu_icons .bi-x {
         display: none;
     }
 
-    .hidden {
-        z-index: -1;
-        opacity: 0;
+    .navbar__checkbox:checked ~ .navbar__menu {
+        display: flex;
     }
+
+    .navbar__checkbox:checked ~ .navbar__menu_icons .bi-list {
+        display: none;
+    }
+    
+    .navbar__checkbox:checked ~ .navbar__menu_icons .bi-x {
+        display: block;
+      }
+    
 
     .footer-links {
         flex-direction: column;
@@ -309,7 +325,7 @@ body {
 }
 
 /*
-* media queary breakpoint for mobile screen
+* media query breakpoint for mobile screen
 */
 
 @media (max-width: 568px) {

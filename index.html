@@ -11,24 +11,24 @@
 </head>
 
 <body>
-    
     <header class="hero">
-        <div class="navbar container">
+        <nav class="navbar container">
             <div class="navbar__logo">
                 <img src="src/images/Logo/LogoWhite.svg" alt="Logo of the company" class="navbar__logo--image">
                 <div class="navbar__logo--text">Start</div>
             </div>
-            <div class="navbar__menu hidden">
-                <a href="" class="navbar__menu--home">Home</a>
-                <a href="" class="navbar__menu--portfolio">Portfolio</a>
-                <a href="" class="navbar__menu--services">Services</a>
-                <a href="" class="navbar__menu--Contact">Contact</a>
-            </div>
-            <div class="navbar__menu_icons">
+            <input type="checkbox" id="menu-toggle" class="navbar__checkbox">
+            <label for="menu-toggle" class="navbar__menu_icons">
                 <i class="bi bi-list"></i>
-                <i class="bi bi-x hide"></i>
-            </div>
-        </div>
+                <i class="bi bi-x"></i>
+            </label>
+            <ul class="navbar__menu">
+                <li><a href="/" class="navbar__menu--home">Home</a></li>
+                <li><a href="/" class="navbar__menu--portfolio">Portfolio</a></li>
+                <li><a href="/" class="navbar__menu--services">Services</a></li>
+                <li><a href="/" class="navbar__menu--contact">Contact</a></li>
+            </ul>
+        </nav>
         
         <section class="section-home grid container">
             <div class="section-home__content flex">
@@ -125,6 +125,4 @@
         </div>
     </footer>
 </body>
-
-<script src="main.js"></script>
 </html>
