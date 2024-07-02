@@ -8,15 +8,15 @@
 
 .section-home__content--button {
     align-self: start;
-    margin-top: 20px;
+    margin-top: var(--margin-top-s);
 }
 
 /* partners section styles */
 
 .section-partners {
-    padding: 40px 0;
+    padding: var(--padding-xl) var(--padding-zero);
     display: grid;
-    gap: 30px;
+    gap: var(--gap-xl);
 }
 
 .section-partners__content--text {
@@ -66,9 +66,9 @@
 
 .section-team {
     display: grid;
-    gap: 30px;
-    margin-top: 15px !important; 
-    margin-bottom: 30px !important;
+    gap: var(--gap-xl);
+    margin-top: var(--margin-top-xs) !important; 
+    margin-bottom: var(--margin-bottom-md) !important;
 }
 
 .section-team__content--text {
@@ -83,15 +83,15 @@
 .section-team__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: var(--gap-xl);
 }
 
 [class^="section-team__cards--"] {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: var(--gap-sm);
     border-radius: 5px;
-    padding: 20px 25px;
+    padding: var(--padding-sm) var(--padding-md);
     box-shadow: var(--shadow-cards);
 }
 
@@ -110,7 +110,7 @@
 @media (max-width: 1200px) {
     .section-partners__logos {
         grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
+        gap: var(--gap-xxl);
     }
 }
 
